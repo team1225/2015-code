@@ -1,10 +1,10 @@
 /**
  * Author: Brian Kowald, John Muse, Henry Fiantaca
- * Team: 1225
+ * Team: FRC Team 1225 | The Gorillas
  * Note To Programmer: This program is a little different than previous years because rather than having stored in one class,
  * 					   multiple functions of the program of the robot are split up into many classes. Hopefully this will make everything
- * 					   easier to read and modify. This class willact as the main class and control the robot driving for the most part
- * 					   and compressor.
+ * 					   easier to read and modify. This class will act as the main class and control the robot driving for the most part
+ * 					   and compressor and the controls.
  */
 
 #include "WPILib.h"
@@ -29,6 +29,7 @@ public:
 			leadPilot(0), copilot(1)
 	{
 		tote = new ToteHandle();
+		bin = new BinLift();
 		compressor = new Compressor();
 		myDrive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor,
 				rearRightMotor);
